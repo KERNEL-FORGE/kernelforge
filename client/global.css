@@ -40,9 +40,7 @@
     --accent-orange: 38 92% 50%;
     --accent-lime: 84 81% 44%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
