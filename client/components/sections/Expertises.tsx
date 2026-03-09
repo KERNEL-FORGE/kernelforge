@@ -31,9 +31,9 @@ const Expertises = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-5xl md:text-8xl font-black mb-8 tracking-tighter"
           >
-            NOS <span className="text-gradient">EXPERTISES</span>
+            L'ART DU <span className="text-gradient">KERNEL</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -54,15 +54,15 @@ const Expertises = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="p-8 rounded-3xl bg-glass hover:bg-white/5 border border-white/5 hover:border-primary/40 transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="p-10 rounded-[3rem] bg-glass hover:bg-white/5 border border-white/5 hover:border-primary/40 transition-all duration-500 glow-green"
             >
-              <div className="flex justify-between items-start mb-6">
-                <div className="p-3 rounded-2xl bg-white/5 group-hover:bg-primary/20 transition-colors">
+              <div className="flex justify-between items-start mb-10">
+                <div className="p-4 rounded-2xl bg-white/5 group-hover:bg-primary/20 transition-all duration-500 group-hover:rotate-12">
                   {item.icon}
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+              <h3 className="text-3xl font-black mb-4 tracking-tight uppercase">{item.title}</h3>
               <p className="text-foreground/60 leading-relaxed mb-6">
                 {item.description}
               </p>

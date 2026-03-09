@@ -20,10 +20,10 @@ const CTA = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight"
+            className="text-6xl md:text-9xl font-black mb-10 leading-[0.85] tracking-tighter"
           >
-            PRÊT À REJOINDRE <br />
-            <span className="text-gradient underline decoration-primary/30">LA FORGE ?</span>
+            ENTREZ DANS <br />
+            <span className="text-gradient">LA FORGE</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -34,12 +34,12 @@ const CTA = () => {
           >
             Que vous soyez une entreprise, un étudiant ou un passionné, nous avons une place pour vous dans notre écosystème.
           </motion.p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-[#ff0080] hover:scale-105 transition-transform px-10 h-16 text-lg rounded-2xl">
-              Nous Contacter <Send className="ml-2" size={18} />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            <Button size="lg" className="bg-primary text-black hover:scale-105 transition-all px-12 h-20 text-2xl font-black rounded-3xl glow-green border-none">
+              REJOINDRE <Send className="ml-3" size={24} />
             </Button>
-            <Button size="lg" variant="outline" className="h-16 px-10 text-lg border-white/10 hover:bg-white/5 rounded-2xl group">
-              En savoir plus <ArrowUpRight className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={18} />
+            <Button size="lg" variant="outline" className="h-20 px-12 text-2xl font-black border-white/10 hover:bg-white/5 rounded-3xl group transition-all">
+              EXPLORER <ArrowUpRight className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" size={24} />
             </Button>
           </div>
         </motion.div>

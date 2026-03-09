@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Contact from "./pages/Contact";
+import ServicesPage from "./pages/ServicesPage";
+import CommunityPage from "./pages/CommunityPage";
+import ExpertisesPage from "./pages/ExpertisesPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +25,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/communaute" element={<CommunityPage />} />
+          <Route path="/expertises" element={<ExpertisesPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/contact" element={<Contact />} />

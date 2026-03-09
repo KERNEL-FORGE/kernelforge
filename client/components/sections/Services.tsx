@@ -28,9 +28,9 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-5xl md:text-7xl font-black mb-6 tracking-tighter"
           >
-            NOS <span className="text-gradient">SERVICES</span>
+            NOTRE <span className="text-gradient underline decoration-primary/20">FORGE</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,12 +52,12 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="p-8 bg-glass rounded-3xl group border border-white/5 hover:border-primary/40 transition-all duration-300"
+              className="p-10 bg-glass rounded-[2.5rem] group border border-white/5 hover:border-primary/40 transition-all duration-500 glow-green"
             >
-              <div className="mb-6 p-4 rounded-2xl bg-white/5 inline-block group-hover:bg-primary/20 transition-colors duration-300">
+              <div className="mb-8 p-5 rounded-3xl bg-white/5 inline-block group-hover:bg-primary/20 transition-all duration-300 group-hover:rotate-12">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <h3 className="text-3xl font-black mb-4 tracking-tight">{service.title}</h3>
               <p className="text-foreground/60 leading-relaxed">
                 {service.description}
               </p>

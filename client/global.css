@@ -7,38 +7,38 @@
 
 @layer base {
   :root {
-    --background: 240 50% 3%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    --card: 240 50% 6%;
+    --card: 142 50% 4%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 240 50% 3%;
+    --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 270 100% 60%;
+    --primary: 142 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 30% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 142 10% 10%;
+    --secondary-foreground: 142 70% 45%;
 
-    --muted: 240 30% 15%;
-    --muted-foreground: 240 10% 70%;
+    --muted: 142 10% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 270 100% 60%;
+    --accent: 142 70% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 30% 15%;
-    --input: 240 30% 15%;
-    --ring: 270 100% 60%;
+    --border: 142 10% 15%;
+    --input: 142 10% 15%;
+    --ring: 142 70% 45%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --accent-pink: 330 100% 60%;
-    --accent-blue: 200 100% 60%;
+    --accent-orange: 38 92% 50%;
+    --accent-lime: 84 81% 44%;
   }
 }
 
@@ -50,6 +50,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(142, 70%, 45%, 0.05) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(38, 92%, 50%, 0.03) 0, transparent 50%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -64,10 +68,18 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#ff0080];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#22c55e] to-[#84cc16];
   }
 
   .bg-glass {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+    @apply bg-black/40 backdrop-blur-xl border border-white/5;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 30px hsla(142, 70%, 45%, 0.2);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 30px hsla(38, 92%, 50%, 0.2);
   }
 }
