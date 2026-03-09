@@ -13,6 +13,7 @@ import CommunityPage from "./pages/CommunityPage";
 import ExpertisesPage from "./pages/ExpertisesPage";
 import BlogPage from "./pages/BlogPage";
 import MediaPage from "./pages/MediaPage";
+import TeamPage from "./pages/TeamPage";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/media" element={<MediaPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/equipe" element={<TeamPage />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
