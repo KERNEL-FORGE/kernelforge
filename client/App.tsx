@@ -12,6 +12,7 @@ import ServicesPage from "./pages/ServicesPage";
 import CommunityPage from "./pages/CommunityPage";
 import ExpertisesPage from "./pages/ExpertisesPage";
 import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
 import MediaPage from "./pages/MediaPage";
 import ChatPage from "./pages/ChatPage";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/communaute" element={<CommunityPage />} />
           <Route path="/expertises" element={<ExpertisesPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetailPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/tchat" element={<ChatPage />} />
           <Route path="/login" element={<Login />} />
