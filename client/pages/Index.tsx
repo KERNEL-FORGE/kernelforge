@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Community from "@/components/sections/Community";
 import Expertises from "@/components/sections/Expertises";
+import BlogPreview from "@/components/sections/BlogPreview";
 import CTA from "@/components/sections/CTA";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -12,6 +13,7 @@ export default function Index() {
       <div className="relative min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-white overflow-x-hidden">
         <Hero />
         <Services />
+        <BlogPreview />
         <Community />
         <Expertises />
         <CTA />

@@ -2,7 +2,13 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
-import { BlogPost, MediaItem, Service } from "@shared/api";
+import { BlogPost, MediaItem, Service, ChatMessage } from "@shared/api";
+
+// Simple in-memory storage (mock db)
+const chatMessages: ChatMessage[] = [
+  { id: "1", user: "Root", text: "Bienvenue sur le chat de Kernel Forge !", timestamp: new Date().toLocaleTimeString(), avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Root" },
+  { id: "2", user: "KernelDev", text: "Quelqu'un a testé la nouvelle version du noyau ?", timestamp: new Date().toLocaleTimeString(), avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=KernelDev" }
+];
 
 // Simple in-memory storage (mock db)
 const blogPosts: BlogPost[] = [
@@ -129,6 +135,24 @@ export function createServer() {
     };
     servicesData.push(newService);
     res.status(201).json({ data: newService, success: true, message: "Service ajouté !" });
+  });
+
+  // Chat API
+  app.get("/api/messages", (_req, res) => {
+    res.json({ data: chatMessages, success: true });
+  });
+
+  app.post("/api/messages", (req, res) => {
+    const { user, text, avatar } = req.body;
+    const newMessage: ChatMessage = {
+      id: Math.random().toString(36).substring(7),
+      user: user || "Anonyme",
+      text,
+      timestamp: new Date().toLocaleTimeString(),
+      avatar: avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${user || 'Anonyme'}`
+    };
+    chatMessages.push(newMessage);
+    res.status(201).json({ data: newMessage, success: true });
   });
 
   return app;

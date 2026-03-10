@@ -13,6 +13,7 @@ import CommunityPage from "./pages/CommunityPage";
 import ExpertisesPage from "./pages/ExpertisesPage";
 import BlogPage from "./pages/BlogPage";
 import MediaPage from "./pages/MediaPage";
+import ChatPage from "./pages/ChatPage";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/expertises" element={<ExpertisesPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/media" element={<MediaPage />} />
+          <Route path="/tchat" element={<ChatPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/contact" element={<Contact />} />

@@ -39,6 +39,14 @@ export interface Service {
   category: "Development" | "Design" | "Security" | "Infrastructure";
 }
 
+export interface ChatMessage {
+  id: string;
+  user: string;
+  text: string;
+  timestamp: string;
+  avatar?: string;
+}
+
 export interface ApiResponse<T> {
   data: T;
   success: boolean;
