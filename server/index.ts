@@ -5,9 +5,17 @@ import { handleDemo } from "./routes/demo";
 import { BlogPost, MediaItem, Service, ChatMessage } from "@shared/api";
 import { initializeSqlite, sqliteStore } from "./sqlite-store";
 
-initializeSqlite();
+let isSqliteInitialized = false;
+
+const ensureSqliteInitialized = () => {
+  if (!isSqliteInitialized) {
+    initializeSqlite();
+    isSqliteInitialized = true;
+  }
+};
 
 export function createServer() {
+  ensureSqliteInitialized();
   const app = express();
 
   // Middleware

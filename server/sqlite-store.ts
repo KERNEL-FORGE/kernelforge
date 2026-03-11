@@ -4,7 +4,9 @@ import { execFileSync } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import { BlogPost, ChatMessage, MediaItem, Service } from "@shared/api";
 
-const defaultDbPath = path.resolve(process.cwd(), "data", "kernelforge.sqlite");
+const defaultDbPath = process.env.VERCEL
+  ? path.resolve("/tmp", "kernelforge.sqlite")
+  : path.resolve(process.cwd(), "data", "kernelforge.sqlite");
 const dbPath = process.env.SQLITE_DB_PATH ? path.resolve(process.env.SQLITE_DB_PATH) : defaultDbPath;
 
 const sqlString = (value: string) => `'${value.replace(/'/g, "''")}'`;
